@@ -18,6 +18,7 @@
     <title>Document</title>
 </head>
 <body>
+    <?php require "header.php"; ?>
     <div class="wrapper">
             <div class="container">
             <?php while(($user = mysqli_fetch_assoc($all_users))): ?>
@@ -33,6 +34,14 @@
         body{
             padding: 0;
             margin: 0;
+        }
+        header{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            background: black;
+            color: white;
         }
         .wrapper{
            display: flex;
@@ -59,6 +68,7 @@
             flex-direction: column;
             max-width: 320px;
             width: 100%;
+            padding: 23px;
 
         }
         .card img{
